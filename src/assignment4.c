@@ -1,58 +1,58 @@
 #include<stdio.h>
 
-void disp_menu(); //disp_menu¸¦ ¼±¾ğÇÑ´Ù
-double add(double num1, double num2); //addÇÔ¼ö¸¦ ¼±¾ğÇÑ´Ù
-double sub(double num1, double num2); //subÇÔ¼ö¸¦ ¼±¾ğÇÑ´Ù
-double mul(double num1, double num2); //mulÇÔ¼ö¸¦ ¼±¾ğÇÑ´Ù
-double div(double num1, double num2); //divÇÔ¼ö¸¦ ¼±¾ğÇÑ´Ù
+void disp_menu(); //disp_menuë¥¼ ì„ ì–¸í•œë‹¤
+double add(double num3, double num4); //addí•¨ìˆ˜ë¥¼ ì„ ì–¸í•œë‹¤
+double sub(double num3, double num4); //subí•¨ìˆ˜ë¥¼ ì„ ì–¸í•œë‹¤
+double mul(double num3, double num4); //mulí•¨ìˆ˜ë¥¼ ì„ ì–¸í•œë‹¤
+double div(double num3, double num4); //diví•¨ìˆ˜ë¥¼ ì„ ì–¸í•œë‹¤
 
 int main() {
-	double num1, num2;  //½Ç¼öÇüÀ¸·Î ¼ıÀÚ(num1, num2)¸¦ ÁöÁ¤ 
-	int sum; //Á¤¼öÇüÀ¸·Î sumÀÌ¶ó´Â º¯¼ö¸¦ ÁöÁ¤ 
+	double num3, num4;  //ì‹¤ìˆ˜í˜•ìœ¼ë¡œ ìˆ«ì(num3, num4)ë¥¼ ì§€ì • 
+	int sum; //ì •ìˆ˜í˜•ìœ¼ë¡œ sumì´ë¼ëŠ” ë³€ìˆ˜ë¥¼ ì§€ì • 
 	while (1) {
-		disp_menu(); //disp_menu ÇÔ¼ö¸¦ È£ÃâÇÑ´Ù  
-		scanf_s("%d", &sum); //sumÀÇ °ªÀ» ÀÔ·Â¹Ş´Â´Ù
+		disp_menu(); //disp_menu í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•œë‹¤  
+		scanf_s("%d", &sum); //sumì˜ ê°’ì„ ì…ë ¥ë°›ëŠ”ë‹¤
 
-		printf("½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :"); //"½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä"¸¦ Ãâ·ÂÇÑ´Ù
-		scanf_s("%lf", &num1); //num1ÀÇ °ªÀ» ÀÔ·Â¹Ş´Â´Ù
-		printf("½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :"); //"½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä"¸¦ Ãâ·ÂÇÑ´Ù
-		scanf_s("%lf", &num2); //num2ÀÇ °ªÀ» ÀÔ·Â¹Ş´Â´Ù
+		printf("ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :"); //"ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”"ë¥¼ ì¶œë ¥í•œë‹¤
+		scanf_s("%lf", &num3); //num3ì˜ ê°’ì„ ì…ë ¥ë°›ëŠ”ë‹¤
+		printf("ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :"); //"ì‹¤ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”"ë¥¼ ì¶œë ¥í•œë‹¤
+		scanf_s("%lf", &num4); //num4ì˜ ê°’ì„ ì…ë ¥ë°›ëŠ”ë‹¤
 
-		if (sum == 1) { //1ÀÏ ¶§
-			printf("¿¬»ê°á°ú=%lf\n", add(num1, num2)); //µ¡¼ÀÀ» ÇÏ¿´À» ¶§ °á°ú¸¦ Ãâ·Â
+		if (sum == 1) { //1ì¼ ë•Œ
+			printf("ì—°ì‚°ê²°ê³¼=%lf\n", add(num3, num4)); //ë§ì…ˆì„ í•˜ì˜€ì„ ë•Œ ê²°ê³¼ë¥¼ ì¶œë ¥
 		}
-		else if (sum == 2) { //2ÀÏ ¶§
-			printf("¿¬»ê°á°ú=%lf\n", sub(num1, num2)); //»¬¼ÀÀ» ÇÏ¿´À» ¶§ °á°ú¸¦ Ãâ·Â
+		else if (sum == 2) { //2ì¼ ë•Œ
+			printf("ì—°ì‚°ê²°ê³¼=%lf\n", sub(num3, num4)); //ëº„ì…ˆì„ í•˜ì˜€ì„ ë•Œ ê²°ê³¼ë¥¼ ì¶œë ¥
 		}
-		else if (sum == 3) { //3ÀÏ ¶§
-			printf("¿¬»ê°á°ú=%lf\n", mul(num1, num2)); //°öÇÏ±â¸¦ ÇÏ¿´À» ¶§ °á°ú¸¦ Ãâ·Â
+		else if (sum == 3) { //3ì¼ ë•Œ
+			printf("ì—°ì‚°ê²°ê³¼=%lf\n", mul(num3, num4)); //ê³±í•˜ê¸°ë¥¼ í•˜ì˜€ì„ ë•Œ ê²°ê³¼ë¥¼ ì¶œë ¥
 		}
-		else if (sum == 4) { //4ÀÏ ¶§
-			if (num2 == 0) { //num2°¡ 0 ÀÏ ¶§ 
-				printf("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.\n"); //"Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù"¸¦ Ãâ·Â
+		else if (sum == 4) { //4ì¼ ë•Œ
+			if (num4 == 0) { //num4ê°€ 0 ì¼ ë•Œ 
+				printf("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.\n"); //"ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤"ë¥¼ ì¶œë ¥
 			}
 			else
-			printf("¿¬»ê°á°ú=%lf\n", div(num1, num2)); //³ª´©¾úÀ» ¶§ °á°ú¸¦ Ãâ·Â
+			printf("ì—°ì‚°ê²°ê³¼=%lf\n", div(num1, num4)); //ë‚˜ëˆ„ì—ˆì„ ë•Œ ê²°ê³¼ë¥¼ ì¶œë ¥
 		}
-		else  //¾Æ¿¹ ´Ù¸¥ ¼ıÀÚÀÏ ¶§
-			printf("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.\n"); //"Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù" Ãâ·Â
+		else  //ì•„ì˜ˆ ë‹¤ë¥¸ ìˆ«ìì¼ ë•Œ
+			printf("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤.\n"); //"ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤" ì¶œë ¥
 	}
 	return 0;
 }
-void disp_menu() { //disp_menuÇÔ¼ö¸¦ Á¤ÀÇÇÑ´Ù
-	printf("1. µ¡¼À\n2. »¬¼À\n3. °ö¼À\n4. ³ª´°¼À\n");  //1~4 ±îÁöÀÇ ¼ıÀÚ¸¦ Ãâ·ÂÇÑ´Ù
-	printf("¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä :"); //¹øÈ£ ÀÔ·ÂÀ» Ãâ·ÂÇÑ´Ù
+void disp_menu() { //disp_menuí•¨ìˆ˜ë¥¼ ì •ì˜í•œë‹¤
+	printf("1. ë§ì…ˆ\n2. ëº„ì…ˆ\n3. ê³±ì…ˆ\n4. ë‚˜ëˆ—ì…ˆ\n");  //1~4 ê¹Œì§€ì˜ ìˆ«ìë¥¼ ì¶œë ¥í•œë‹¤
+	printf("ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš” :"); //ë²ˆí˜¸ ì…ë ¥ì„ ì¶œë ¥í•œë‹¤
 }
 
-double add(double num1, double num2) {   //½Ç¼öÇüÀ¸·Î add(µ¡¼À) ÇÔ¼ö¸¦ Á¤ÀÇÇÑ´Ù
-	return num1 + num2;   //num1+num2¸¦ ¹İÈ¯
+double add(double num3, double num4) {   //ì‹¤ìˆ˜í˜•ìœ¼ë¡œ add(ë§ì…ˆ) í•¨ìˆ˜ë¥¼ ì •ì˜í•œë‹¤
+	return num3 + num4;   //num3+num4ë¥¼ ë°˜í™˜
 }
-double sub(double num1, double num2) {  //½Ç¼öÇüÀ¸·Î sub(»¬¼À) ÇÔ¼ö¸¦ Á¤ÀÇÇÑ´Ù
-	return num1 - num2;  //num1-num2¸¦ ¹İÈ¯
+double sub(double num3, double num4) {  //ì‹¤ìˆ˜í˜•ìœ¼ë¡œ sub(ëº„ì…ˆ) í•¨ìˆ˜ë¥¼ ì •ì˜í•œë‹¤
+	return num3 - num4;  //num3-num4ë¥¼ ë°˜í™˜
 }
-double mul(double num1, double num2) { //½Ç¼öÇüÀ¸·Î mul(°ö¼À) ÇÔ¼ö¸¦ Á¤ÀÇÇÑ´Ù
-	return num1 * num2; //num1*num2¸¦ ¹İÈ¯
+double mul(double num3, double num4) { //ì‹¤ìˆ˜í˜•ìœ¼ë¡œ mul(ê³±ì…ˆ) í•¨ìˆ˜ë¥¼ ì •ì˜í•œë‹¤
+	return num3 * num4; //num3*num4ë¥¼ ë°˜í™˜
 }
-double div(double num1, double num2) { //½Ç¼öÇüÀ¸·Î div(³ª´°¼À) ÇÔ¼ö¸¦ Á¤ÀÇÇÑ´Ù
-	return num1 / num2; //num1 / num2¸¦ ¹İÈ¯
+double div(double num3, double num4) { //ì‹¤ìˆ˜í˜•ìœ¼ë¡œ div(ë‚˜ëˆ—ì…ˆ) í•¨ìˆ˜ë¥¼ ì •ì˜í•œë‹¤
+	return num3 / num4; //num3 / num4ë¥¼ ë°˜í™˜
 }
